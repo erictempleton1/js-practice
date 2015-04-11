@@ -1,17 +1,4 @@
-var fs = require('fs')
-
-/*
-var reading = fs.readFileSync('learnyounode2.js');
-
-var splits = reading.toString().split('\n');
-
-console.log((splits.length - 1));
-
-console.log(splits);
-
-// check to see what the last element of the list is
-console.log(splits[splits.length - 1]);
-*/
+var fs = require('fs');
 
 function fileInfo(file_name) {
     var reading = fs.readFileSync(file_name);
