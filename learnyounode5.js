@@ -7,7 +7,7 @@ function folderReader(error, dirContents) {
         return console.error(error);
     else
         for (var i = 0; i < dirContents.length; i++) {
-            if (process.argv[2].slice(-process.argv[3].length) == process.argv[3])
-              return console.log(process.argv[2]);
+            if (dirContents.slice(-process.argv[3].length) == process.argv[3])
+              return console.log(dirContents);
         };
 };
