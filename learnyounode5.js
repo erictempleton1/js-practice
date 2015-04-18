@@ -1,13 +1,12 @@
 var fs = require('fs');
+var path = require('path');
 
-//fs.readdir(process.argv[2], process.argv[3], folderReader);
 
-fs.readdir('.', folderReader);
-
-function folderReader(error, dirContents) {
+fs.readdir('.', function(error, files) {
     if (error)
         return console.error(error);
-    else
-        dirContents.forEach(folderReader);
-};
+    files.forEach(function(file) {
+        console.log(path.extname(file));
+    })
+})
 
